@@ -1,0 +1,311 @@
+% Intro Syllabus: Fall 2019
+
+\documentclass[hidelinks]{article}
+
+%-- Activate below to make default font sans serif --%
+%\renewcommand{\familydefault}{\sfdefault}
+
+%-- Set Margins --%
+\usepackage[margin=2.5cm]{geometry}
+
+%-- Package for text colouration --%
+\usepackage[usenames,dvipsnames]{color} 
+
+%-- Package for Links --%
+\usepackage{hyperref} 
+
+%-- Set paragraph spacing and indentation --%
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5cm}
+
+%-- Package for controlling spacing of lists --%
+\usepackage[shortlabels]{enumitem}
+
+%-- Packages for making nice tables --%
+\usepackage{booktabs}
+\usepackage{makecell}  % Required for specifying multiple rows within a table cell
+\usepackage[table]{xcolor}  % Required for alternating line colours of tables
+
+%-- Setting for headers ---%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}  % Removes line under header
+\lhead{\includegraphics[width=0.6\textwidth]{figures/logo.png}}
+
+%-- Packages for Proper Handling of Figures --%
+\usepackage{graphicx}
+\usepackage{float}
+
+
+%---------------------------------------------------------------------------------------
+\begin{document}
+
+%-- Without the *, vspace is cleared at the beginning of each page --%
+\vspace*{0.01cm}
+
+%-----------------------------------%
+%  Course Info                         %
+%-----------------------------------%
+\begin{center}
+	\Large{\textbf{Molecular and Cell Biology  - BIOL 1201\\
+	Fall 2019\\
+	Course Outline}}
+\end{center}
+
+
+%-----------------------------------%
+%      Instructor Info              %
+%-----------------------------------%
+\textbf{\underline{Instructor Information}:}\\
+\\
+	%-- The @{} removes the spacing before that column, aligning these to the left (otherwise they are indented a bit) --%
+	\begin{tabular}{@{} p{2.3cm} l }
+		\textbf{Instructor:}	& Dr. Timothy R. Frasier (``Tim''), Associate Professor\\
+		\\
+		\textbf{Contact:} 	& Office: S327\\
+					& E-mail: timothy.frasier@smu.ca\\
+					& Tel: 902-491-6382\\
+		\\
+		\textbf{Office Hours:} & TWR 12:00-2:00, or by appointment				
+	\end{tabular}
+
+	\begin{center}
+		\rule{4cm}{0.5pt}
+	\end{center}
+
+
+%-----------------------------------%
+%      Course Info                  %
+%-----------------------------------%
+\textbf{\underline{Course Information}:}
+
+
+	%----------------------------------%
+	%  Course times and locations      %
+	%----------------------------------%
+	\begin{tabular}{@{} p{2.3cm} l l l}
+		\textbf{Lectures:} & TR & 11:30--12:45 & MM Theatre\\
+		\addlinespace
+		\textbf{Labs:} & M, T, W, R & 2:30--5:30 &\\
+			& \multicolumn{3}{p{14cm}}{\emph{Note that the labs are run independently of the lectures for this course. I am teaching the lecture component, whereas Dr. Jessica Boyd (jessica.boyd@smu.ca) is coordinating the laboratory component. Therefore, if you have questions about the labs, please contact your TA or Dr. Boyd.}}
+	\end{tabular}
+	
+	
+	%----------------------------------%
+	%  Course Sites                    %
+	%----------------------------------%
+	\begin{tabular}{@{} p{2.3cm} p{13.9cm}}
+		\textbf{Course Sites:} & The course syllabus, as well as lecture materials, will be placed on the course Brightspace page. You should also see Brightspace for detailed reading assignments for the labs. Read them before attending the lab, and always bring a copy of the lab textbook to the lab. That way you will understand what?s happening in the lab, learn more, and enjoy the labs more.\\
+	\end{tabular}
+
+
+	%----------------------------------%
+	%  Course Description              %
+	%----------------------------------%
+	\textbf{Course Description:}\\
+	\begin{tabular}{@{} p{2.3cm} p{13.9cm}}
+		 & This course is an introduction to the principles of life at the cellular and molecular level. Major topics include the molecules that encode biological information, prokaryotic and eukaryotic cells, cell membranes and compartments, cellular respiration, photosynthesis, transcription and translation, DNA replication and cell division, mutation, variation and inheritance.
+	\end{tabular}
+
+	%------------%
+	% Credits    %
+	%------------%
+	\textbf{3 credit hours}
+
+	%----------------------------------%
+	%  Pre-requisites                  %
+	%----------------------------------%
+	\begin{tabular}{@{} p{2.6cm} l }
+		\textbf{Pre-requisites:} & Nova Scotia grade 12 biology or equivalent. 
+	\end{tabular}
+
+	%----------------------------------%
+	%  Required Materials             %
+	%----------------------------------%
+	\textbf{Required Materials:}\\
+	\begin{tabular}{@{} p{2.3cm} p{13.9cm}}
+		& \emph{Writing Papers in the Biological Sciences}, 5th edition. by V.E. McMillan. Bedford/St. Martin's
+	\end{tabular}	
+
+	\newpage
+	%-----------------------------------%
+	%      Learning Outcomes         %
+	%-----------------------------------%
+	\textbf{Learning Outcomes:}\\
+	By the end of this course, students should be able to:
+		\begin{itemize}[topsep=-8pt]
+			\item Identify work characteristics that promote independent research and writing.
+			\item Recognize the difference between primary \& secondary sources of information and the means by which
+they are obtained
+			\item Construct a reasonable timeline to conduct academic research and writing
+			\item Describe the sections of a thesis and scientific journal article and the contents that belong in each
+section
+			\item Write and edit an Honours thesis
+			\item Create, edit, and present a 12 minute oral presentation
+			\item Create, edit, and present a poster at a scientific conference
+			\item Provide constructive criticism on oral presentations, poster presentations, and scientific writing to your
+peers and other scientists.\\
+		\end{itemize}
+		
+%------------------------------------%
+% Course Content & Schedule          %
+%------------------------------------%
+\textbf{Course Content and Planned/Tentative Schedule:}\\
+\emph{The schedule below is TENTATIVE. We will try to stick to this schedule, but it is likely that we will get off-track at one point or another. Necessary changes to the schedule will be made accordingly, and you will be notified of any changes during class hours.}	
+
+	\begin{table}[H]
+		\footnotesize
+		\centering
+		\rowcolors{2}{white}{black!15}
+		\begin{tabular}{l p{6cm} p{6cm}}
+			\toprule
+			\textbf{Day} & \textbf{Topic} & \textbf{Relevant Readings}\\
+			\midrule
+			Sep. 5 & &\\
+			\addlinespace
+			Sep. 10 & &\\
+			\addlinespace
+			Sep. 12 & &\\
+			\addlinespace
+			Sep. 17 & &\\
+			\addlinespace
+			Sep. 19 & &\\
+			\addlinespace
+			Sep. 24 & &\\
+			\addlinespace
+			Sep. 26 & &\\
+			\addlinespace
+			Oct. 1 & &\\
+			\addlinespace
+			Oct. 3 & \textbf{Midterm Exam \#1} & None \\
+			\addlinespace
+			Oct. 8 & &\\
+			\addlinespace
+			Oct. 10 & &\\
+			\addlinespace
+			Oct. 15 & &\\
+			\addlinespace
+			Oct. 17 & &\\
+			\addlinespace
+			Oct. 22 & &\\
+			\addlinespace
+			Oct. 24 & &\\
+			\addlinespace
+			Oct. 29 & &\\
+			\addlinespace
+			Oct. 31 & \textbf{Midterm Exam \#2} & None\\
+			\addlinespace
+			Nov. 5 & &\\
+			\addlinespace
+			Nov. 7 & &\\
+			\addlinespace
+			Nov. 12 & NO CLASS - FALL BREAK & None\\
+			\addlinespace
+			Nov. 14 & NO CLASS - FALL BREAK & None\\
+			\addlinespace
+			Nov. 19 & &\\
+			\addlinespace
+			Nov. 21 & &\\
+			\addlinespace
+			Nov. 26 & &\\
+			\addlinespace
+			Nov. 28 & &\\
+			\addlinespace
+			Dec. 3 & &\\
+			\bottomrule
+		\end{tabular}
+	\end{table}	
+
+
+	\newpage
+	%------------------------------------%
+	% Methods of Course Delivery %
+	%------------------------------------%
+	\textbf{Methods of Course Delivery:}\\
+	\begin{tabular}{@{} p{2.3cm} p{13.9cm}}
+		 & BIOL 4549 consists of a series of lectures, informal discussions, and exercises that are meant to teach, reinforce, and give you opportunities to practice the different skills required for effect communication in science. This includes the formats of critical review, research posters, research presentations, and the writing of theses or manuscripts. You must actively participate during the class and plan to attend every lecture/class period. \\
+	\end{tabular}	 
+
+\vspace{0.3cm}
+
+
+	%-----------------------------------%
+	%      Marking Scheme               %
+	%-----------------------------------%
+	\textbf{Marking Scheme:}
+		\begin{table}[H]
+		\centering
+			\begin{tabular}{l l}
+				\toprule
+				\textbf{Assignment} & \textbf{\% of Final Grade}\\
+				\midrule
+				\#1 Critique & 5\%\\
+				\addlinespace
+				\#2 SA Talks & 5\%\\
+				\addlinespace
+				\#3 Poster & 15\%\\
+				\addlinespace
+				\#4a Methods, Results \& Discussion & 12\%\\
+				\addlinespace
+				\#4b Review of Methods, Results \& Discussion & 8\%\\
+				\addlinespace
+				\#5 Oral Presentation & 15\%\\
+				\addlinespace
+				Participation & 2.5\%\\
+				\midrule
+				& \textbf{62.5\%}\\
+				\bottomrule
+			\end{tabular}
+		\end{table}	
+
+
+	%----------------------------------------%
+	%  Description of Course Components      %
+	%----------------------------------------%
+	\textbf{Description of Course Components:}
+		\begin{table}[H]
+			\begin{tabular}{@{} p{2.8cm} p{13.4cm}}
+				\textbf{Assignment \#1: Critique} & For this assignment, you will choose an article from the ``popular'' media that makes a scientific claim that you think is not realistic/believable. You will then find the scientific article(s) on which it was based, and determine if the results were presented appropriately in the popular article. You will then give a short (~10 minute) presentation on your findings to the class.\\
+				\addlinespace
+				\textbf{Assignment \#2: SA Talk} & For this assignment you will give a practice talk of your research so far, including any relevant \emph{expected} methods and results. \textbf{The class will vote on these talks to decide who goes to the Science Atlantic conference.}\\
+				\addlinespace
+				\textbf{Assignment \#3: Poster presentation} & You will create and present a poster of your work to the Biology department. You will be marked on the quality of your poster, your presentation, and your ability to answer question.\\
+				\addlinespace
+				\textbf{Assignment \#4: Thesis draft \& review} & For this assignment you will (a) turn in the remaining sections of your thesis (Materials and Methods, Results, and Discussion), and (b) review that of one of your classmates. I realize that you will not likely be done with all of your work at this stage. However, you should write out the Materials and Methods that you have done, as well as what you \emph{plan to do}. The same is true for the Results section where, if you do not have results yet, you should write what you \emph{expect} to find (including a potential figure). The Discussion section should be written accordingly. We will discuss this more in class.\\
+				\addlinespace
+				 \textbf{Assignment \#5: Oral presentation} & This is a 12 minute presentation of your work that will serves as a practice talk for your thesis defence. It should include background information, hypotheses/predictions, the specific objectives/questions you addressed, methods, results, discussion, and conclusions from your work.\\
+			\end{tabular}
+		\end{table}
+
+
+	\newpage
+	%---------------------------------------------------------------------%
+	%  Student Responsibilities, Academic Integrity, & Code of Conduct    %
+	%---------------------------------------------------------------------%
+	\textbf{Student Responsibilities, Academic Integrity, \& Code of Conduct}
+		\begin{enumerate}[topsep=0pt]
+			\item To ensure that all students and guest speakers have an interactive audience for their presentations \textbf{attendance and participation are mandatory}. You must let me know in advance of any known absences.
+			\item Treat your colleagues and instructors with respect and give others your attention when they are speaking.
+			\item Smart phones may be used to take notes, but all the sounds must be turned off and you should not receive/send calls/texts, or check email during class.
+			\item \textbf{Academic integrity: As in all courses, plagiarism and cheating will not be tolerated.} You must hand in your own work, written in your own words. Plagiarism will be dealt with according to policies outlined in the Academic Calendar. It is your responsibility to familiarize yourself with Saint Mary's policies on Academic Integrity by consulting the ``\emph{Academic Integrity and Student Responsibility}'' (p. 19--27) and ``\emph{Academic Regulations}'' (p. 28--42) sections of the \href{http://www.smu.ca/webfiles/UG%20calendar%202017-18%2024%20March%202017.pdf}{\textcolor{blue}{Academic Calendar}}, in order to be well informed on the consequences of dishonest behaviour.  
+			\item Technology in the classroom: Please do not record lectures without my direct approval.
+		\end{enumerate}
+
+	\vspace{0.3cm}
+ 
+
+	%-------------------------%
+	%  Missed Classes         %
+	%-------------------------%
+	\textbf{Missed Classes:}\\
+	SMU faculty no longer accept ``sick notes'' for missed days of class or exams. Instead, if students miss a day of class, particularly when there was something due that day (e.g., a research presentation or mid-term exam), they need to read, print out, fill out, and sign a copy of the \href{http://www.smu.ca/webfiles/Declaration_of_Extenuating_Circumstances_withinTerm.pdf}{\textcolor{blue}{Declaration of Extenuating Circumstances}}. This should then be submitted to the professor, and they will keep a copy, and also give a copy to the Science Advising Centre for your records. 
+
+
+	\vspace{0.3cm}
+	
+	%----------------------------------------------%
+	%  Accessibility                               %
+	%----------------------------------------------%
+	\textbf{Accessibility:}\\
+	The Fred Smithers Centre establishes individualized support services to help students with physical, medical, and learning disabilities. Accommodations work best for all concerned if the student comes forward to the Smithers Centre early.  Students are encouraged to seek more information by visiting the Centre, or its \href{http://www.smu.ca/campus-life/fred-smithers-centre.html}{\textcolor{blue}{website}}.	 
+\end{document}
