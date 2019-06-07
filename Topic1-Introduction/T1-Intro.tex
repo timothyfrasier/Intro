@@ -1,0 +1,601 @@
+% Topic #1 - Introduction
+
+%------------------------------------
+% Main Settings
+%------------------------------------
+\documentclass[10pt]{beamer}
+
+%--------------------------------------%
+% Set font, and frame title info    %
+%--------------------------------------%
+\usefonttheme{serif}
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamerfont{framesubtitle}{series=\bfseries}
+
+%--------------------------------------
+% "Sub-settings"
+%--------------------------------------
+\setbeamertemplate{navigation symbols}{}		% Get rid of navigation symbols
+\setbeamertemplate{items}[default]				% Uses triangles and numbers instead of 3D balls (which I don't like)
+\setbeamertemplate{itemize items}[circle]		% Use circles instead of triangles for itemized lists
+
+%-------------------------------------
+% Custom Commands
+%-------------------------------------
+\newtheorem{hypothesis}{Hypothesis}
+
+%---For Footnotes---%
+\usepackage{tikz}
+\usetikzlibrary{positioning,calc} % Needed to make angle connector arrows.
+\usepackage[absolute,overlay]{textpos}
+\newenvironment{reference}[2]{%
+	\begin{textblock*}{\textwidth}(#1,#2)
+		\tiny\bgroup\color{gray}}{\egroup\end{textblock*}}
+%------%		
+
+%----------------------------------------%
+% For making definitions in boxes        %
+%----------------------------------------%
+\usepackage{tcolorbox}
+
+%-- Packages for making nice tables --%
+\usepackage{booktabs}
+\usepackage{makecell}  % Required for specifying multiple rows within a table cell
+
+%--------------------------------%
+%     Custom Colours             %
+%--------------------------------%
+\usepackage{xcolor}
+\definecolor{myblue}{rgb}{0,0.3,0.6}
+\definecolor{myblue2}{rgb}{0,0.4,0.8}
+\setbeamercolor{frametitle}{fg=myblue}
+\setbeamercolor{framesubtitle}{fg=myblue2}
+\setbeamercolor{itemize item}{fg=myblue}
+\setbeamercolor{itemize subitem}{fg=myblue2}
+\setbeamercolor{enumerate item}{fg=myblue}
+\setbeamercolor{enumerate subitem}{fg=myblue2}
+
+
+%----------------------------------%
+% Creating nice blocks             %
+%----------------------------------%
+\setbeamercolor{block title}{bg=myblue, fg=white} %bg=background, fg=foreground
+\setbeamercolor{block body}{bg=myblue!20, fg=black} %bg=background, fg=foreground
+\setbeamerfont*{block title}{family=\sffamily, series=\bfseries, size=\large}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+%------------------------------------------
+%  Begin Presentations
+%------------------------------------------
+\begin{document}
+
+
+%-----------------------%
+%  Title Slide          %
+%-----------------------%
+\begin{frame}
+	\begin{tikzpicture}[remember picture,overlay]
+		\fill[color=myblue, draw=none] (current page.west) rectangle(current page.north east);
+		\node at (1.6, 1.0) {\color{white}\LARGE{\textbf{BIOL 1201:}}};
+		\node at (4, 0.2) {\color{white}\LARGE{\textbf{Molecular and Cell Biology}}};
+		\node at (0.82, -1.2) {\color{black}\normalsize{Tim Frasier}};
+		\node at (1.8, -1.65) {\color{black}{\emph{Saint Mary's University}}};
+	\end{tikzpicture}
+\end{frame}
+
+
+%-----------------------%
+%     Welcome           %
+%-----------------------%
+\begin{frame}[t]
+\frametitle{Welcome!}
+
+	\vspace{0.5cm}
+
+	\begin{columns}[T]
+		\begin{column}{0.5\textwidth}
+			\begin{center}
+				To SMU\\
+				\vspace{0.25cm}
+				\includegraphics[width=0.8\textwidth]{figures/smu.jpg}
+			\end{center}
+		\end{column}
+		
+		\begin{column}{0.5\textwidth}
+			\begin{center}
+				To Biology\\
+				\vspace{0.25cm}
+				\includegraphics[width=1.0\textwidth]{figures/biology.jpg}
+			\end{center}
+		\end{column}
+	\end{columns}	
+\end{frame}
+
+
+%------------------------%
+%    Introductions       %
+%------------------------%
+\begin{frame}[t]
+\frametitle{Introductions}
+\vspace{0.5cm}
+	
+	\begin{center}
+		\textbf{Dr. Tim Frasier}
+	\end{center}
+	
+	\vspace{0.25cm}
+	
+	\begin{columns}
+		\begin{column}{0.33\textwidth}
+			\begin{center}
+				\includegraphics[width=1.0\textwidth]{figures/forensics.jpg}
+			\end{center}
+		\end{column}
+		
+		\begin{column}{0.33\textwidth}
+			\begin{center}
+				\includegraphics[width=1.0\textwidth]{figures/pulled.png}
+			\end{center}
+		\end{column}
+		
+		\begin{column}{0.33\textwidth}
+			\begin{center}
+				\includegraphics[width=1.0\textwidth]{figures/biology2.jpg}
+			\end{center}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%--------------------------%
+%    Research              %
+%--------------------------%
+\begin{frame}[t]
+\frametitle{Research}
+
+	\begin{center}
+		Conservation genetics of endangered whale species
+	\end{center}
+
+	\begin{columns}[t]
+		\begin{column}{0.5\textwidth}
+			\begin{center}
+				\includegraphics[width=0.8\textwidth]{figures/rightwhale.jpg}\\
+				\vspace{0.25cm}
+				\includegraphics[width=0.8\textwidth]{figures/beluga.jpg}
+			\end{center}
+		\end{column}
+		
+		\begin{column}{0.5\textwidth}
+			\begin{center}
+				\includegraphics[width=0.7\textwidth]{figures/orca.jpg}\\
+				\vspace{0.25cm}
+				\includegraphics[width=0.7\textwidth]{figures/humpback.jpg}
+			\end{center}
+		\end{column}	
+	\end{columns}	
+\end{frame}
+
+
+%---------------------------%
+%   Forensics               %
+%---------------------------%
+\begin{frame}[t]
+\frametitle{Forensics}
+\vspace{0.25cm}
+
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{figures/nrdpfc.png}\\
+		\vspace{0.5cm}
+		\includegraphics[width=0.6\textwidth]{figures/rcmp.png}
+	\end{center}
+\end{frame}
+
+
+%-----------------------%
+%  Cycling              %
+%-----------------------%
+\begin{frame}
+	\begin{columns}
+		\begin{column}{0.6\textwidth}
+			\begin{center}
+				\includegraphics[width=0.75\textwidth]{figures/mamil.png}
+			\end{center}
+		\end{column}
+		
+		\begin{column}{0.4\textwidth}
+			\includegraphics[width=0.9\textwidth]{figures/cycling1.png}\\
+			\vspace{0.5cm}
+			\includegraphics[width=0.9\textwidth]{figures/cycling2.png}\\
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%-----------------------%
+%  Contact Information  %
+%-----------------------%
+\begin{frame}[t]
+\frametitle{Contact Information}
+\vspace{0.5cm}
+
+	\begin{tabular}{@{} l l}
+		\textbf{Office:} & Science Building, room S 327\\
+		\addlinespace
+		\addlinespace
+		\textbf{Tel:} & 902-491-6382\\
+		\addlinespace
+		\addlinespace
+		\textbf{E-mail:} & timothy.frasier@smu.ca\\
+				& \textcolor{myblue2}{\emph{Please put BIOL 1201 in subject line}}\\
+		\addlinespace
+		\addlinespace
+		\textbf{Office Hours:} & TR 1:00--4:00 \textcolor{myblue2}{\emph{or via E-mail!}}\\
+		
+	\end{tabular}
+\end{frame}
+
+
+%-----------------------%
+% Course Content        %
+%-----------------------%
+\begin{frame}[t]
+\frametitle{Course Content}
+\vspace{0.5cm}
+All course content will be posted (and available) on the course Brightspace page
+	\bigskip
+	\begin{itemize}
+		\item Syllabus (with assigned readings)
+		\bigskip
+		\item Lecture presentations
+		\bigskip
+		\item Other relevant information and postings
+	\end{itemize}
+	\bigskip
+	
+	\begin{center}
+		\textcolor{myblue2}{\emph{Brief walkthrough}}
+	\end{center}
+	
+\end{frame}
+
+
+
+%-----------------------%
+% Lectures              %
+%-----------------------%
+\begin{frame}[t]
+\frametitle{Lectures}
+\vspace{0.5cm}
+
+	\begin{tabular}{@{} l l}
+		\textbf{Times:} & TR 11:30--12:45 MM Theatre
+	\end{tabular}
+	
+	\vspace{0.5cm}
+	
+	Will explain/discuss the relevant topics throughout the term
+	
+	\vspace{0.5cm}
+	
+	Content is \emph{supplemental to}, \textbf{not} a \emph{replacement for}, information from the textbooks
+	
+		\begin{itemize}
+			\item \small{Tests will focus primarily (but not exclusively!) on lecture content, \textbf{but} textbook information will help with understanding}
+		\end{itemize}
+\end{frame}
+
+
+%-----------------------%
+% Textbooks             %
+%-----------------------%
+\begin{frame}[t]
+\frametitle{Textbooks}
+
+	\begin{center}
+		Will have two perspectives of most topics: macro and micro, for a richer understanding
+	\end{center}	
+	
+	\begin{columns}[t]
+		\begin{column}{0.5\textwidth}
+			\begin{center}
+				\includegraphics[width=0.5\textwidth]{figures/carroll.jpg}\\
+				\vspace{0.5cm}
+				Stories associated with major topics
+			\end{center}
+		\end{column}
+		
+		\begin{column}{0.5\textwidth}
+			\begin{center}
+				\includegraphics[width=0.5\textwidth]{figures/campbell.jpg}\\
+				\vspace{0.5cm}
+				Detailed descriptions of major topics 
+			\end{center}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%-----------------------%
+% Textbooks: Carroll    %
+%-----------------------%
+\begin{frame}
+\frametitle{Textbooks}
+
+	\begin{columns}
+		\begin{column}{0.3\textwidth}
+			\begin{center}
+				\includegraphics[width=1.0\textwidth]{figures/carroll.jpg}
+			\end{center}	
+		\end{column}
+		
+		\begin{column}{0.7\textwidth}
+			\begin{itemize}
+				\item Just hard copy at bookstore (eBook from Amazon, etc.)
+				\vspace{0.25cm}
+				\item Read as outlined in the syllabus (or more!)
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%-----------------------%
+% Textbooks: Campbell   %
+%-----------------------%
+\begin{frame}
+\frametitle{Textbooks}
+
+	\begin{columns}
+		\begin{column}{0.3\textwidth}
+			\begin{center}
+				\includegraphics[width=1.0\textwidth]{figures/campbell.jpg}
+			\end{center}	
+		\end{column}
+		
+		\begin{column}{0.7\textwidth}
+			\begin{itemize}
+				\item Hard copy and/or eBook at bookstore
+				\bigskip
+				\item Read as outlined in the syllabus (or more!)
+				\bigskip
+				\item Online content, including Mastering exercises
+				\bigskip
+				\item \textbf{Learning Catalytics}
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+%-----------------------%
+% Learning Catalytics   %
+%-----------------------%
+\begin{frame}[t]
+\frametitle{Learning Catalytics}
+\vspace{0.25cm}
+
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{figures/learning.png}
+		
+		\vspace{0.25cm}
+		
+		Will have a tutorial \textcolor{red}{next class!}
+	\end{center}
+
+\end{frame}
+
+
+%------------------------%
+%  Grades                %
+%------------------------%
+\begin{frame}[t]
+\frametitle{Grades}
+\vspace{0.5cm}
+
+	\begin{center}
+		\begin{tabular}{l l r r}
+			\textbf{Component} & \textbf{Subcomponent} & \textbf{Weight} & \textbf{Total}\\
+			\midrule
+				\textbf{Labs} & Pre-lab quizzes & 4\% &\\
+				& Lab worksheets & 16\% &\\
+				& Lab exams (2 @ 10\% each) & 20\% & \textbf{40\%}\\
+			\midrule
+				\textbf{Lecture} & Clickers & 6\% &\\
+				& Mid-term Exam \#1 & 18\% &\\
+				& Mid-term Exam \#2 & 18\% &\\
+				& Final Exam & 18\% & \textbf{60\%}\\
+			\midrule
+				& & & \textbf{100\%}					
+		\end{tabular}
+	\end{center}	
+\end{frame}
+
+
+%------------------------%
+%  Grades 2              %
+%------------------------%
+\begin{frame}[t]
+\frametitle{Grades}
+\vspace{0.5cm}
+
+	\begin{center}
+		\begin{tabular}{l l r r}
+			\textbf{Component} & \textbf{Subcomponent} & \textbf{Weight} & \textbf{Total}\\
+			\midrule
+				\textbf{Labs} & Pre-lab quizzes & 4\% &\\
+				& Lab worksheets & 16\% &\\
+				& Lab exams (2 @ 10\% each) & 20\% & \textbf{40\%}\\
+			\midrule
+				\textbf{Lecture} & Clickers & 6\% &\\
+				& Mid-term Exam \#1 & 18\% &\\
+				& Mid-term Exam \#2 & 18\% &\\
+				& Final Exam & 18\% & \textbf{60\%}\\
+			\midrule
+				& & & \textbf{100\%}					
+		\end{tabular}
+	\end{center}	
+	
+	\begin{tikzpicture}[overlay]
+		\node[text centered, draw = red, rounded corners, fill = red!30, text width=0.5\textwidth, minimum height = 2cm] at (5.5, 2.5) (node1) {Must obtain $>$50\% in \textbf{both} the lecture and lab to get credit!};	
+	\end{tikzpicture}
+	
+\end{frame}
+
+
+%-------------------------%
+%  Labs                   %
+%-------------------------%
+\begin{frame}[t]
+\frametitle{Labs}
+\vspace{0.5cm}
+
+	\begin{tabular}{@{} l l l l}
+		\textbf{Times:} & 2:30--5:29 & M (``A''), T (``B''), W (``C''), R (``E'') & S 139\\
+						& 9:30--12:29 & F (``F'') & S 139\\
+	\end{tabular}
+	
+	\bigskip
+	No labs this week!
+	
+	\bigskip
+	\begin{itemize}
+		\item WHMIS Training (by \textcolor{red}{Sep. 25}) - see Brightspace
+		\item Lab coat \& goggles
+		\item Coordinator - Dr. Jessica Boyd (\textcolor{myblue}{jessica.boyd@smu.ca})
+		\item \textcolor{red}{These are independent from the lecture}
+	\end{itemize}
+\end{frame}
+	
+
+%-------------------------%
+%  Housekeeping           %
+%-------------------------%
+\begin{frame}[t]
+\frametitle{Housekeeping}
+\vspace{0.5cm}
+
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{figures/grades.pdf}
+	\end{center}
+
+	\begin{tikzpicture}[overlay]
+		\node[text centered, text width=0.35\textwidth, minimum height = 2cm] at (9.5, 0) (node1) {\footnotesize{``Thanks for making this course so easy. You gave us all the information we needed to ace the exams.''}};	
+		
+		\node[text centered, text width=0.35\textwidth, minimum height = 2cm] at (1.5, 0) (node2) {\footnotesize{``Thanks for not doing your job. You tested us on completely different information than provided in lectures.''}};	
+	\end{tikzpicture}
+\end{frame}
+
+
+%-------------------------%
+%  Exams                  %
+%-------------------------%
+\begin{frame}[t]
+\frametitle{Housekeeping}
+\vspace{0.5cm}
+
+	Exam questions will rarely be based solely on memorization
+	
+	\bigskip
+	
+	Instead, they will focus on testing your \emph{understanding} of a topic
+	
+	\bigskip
+	
+	\begin{center}
+		In this way, it is true that many exam questions will not be \textcolor{myblue2}{\emph{exactly}} on things that you have seen before, but if you \emph{understand} the content you should be able to answer them.
+	\end{center}
+\end{frame}
+
+
+%-------------------------%
+%  Exams 2                %
+%-------------------------%
+\begin{frame}[t]
+\frametitle{Example}
+\vspace{0.5cm}
+
+	\textbf{Material:} Mitochondria are organelles inside of cells that produce energy; where sugars are broken down into ATP, which can then be used as energy for the cell. Different cell types have different numbers of mitochondria within them, depending on their energetic needs.
+	
+	\bigskip
+	
+	\textbf{Potential test question:}
+	Suppose a person has a genetic disease where their body produces only half of the ``normal'' amount of mitochondria in each cell. The functioning of which tissue/organ will be the most affected by this disease? 
+	
+		\begin{enumerate}
+			\item[a.] Hair
+			\item[b.] Heart
+			\item[c.] Skin
+			\item[d.] Toenails 
+		\end{enumerate}	
+\end{frame}
+
+
+%-------------------------%
+% Studying 1              %
+%-------------------------%
+\begin{frame}[t]
+\frametitle{Housekeeping}
+\vspace{0.5cm}
+
+	Should keep this in mind when you are studying
+	
+		\begin{itemize}
+			\medskip
+			\item Don't just memorize things
+			\bigskip
+			\item Make sure that you \emph{understand} them as well
+		\end{itemize}
+\end{frame}
+
+
+%-------------------------%
+% I Don't Know Everything %
+%-------------------------%
+\begin{frame}[t]
+\frametitle{Housekeeping}
+\vspace{0.5cm}
+
+	I won't know the answers to every question that you ask!
+		
+	\bigskip
+		
+	Class will end early sometimes
+		\begin{itemize}
+			\item To allow time for the many questions that arise
+		\end{itemize}
+\end{frame}
+
+
+%--------------------------%
+%  Success                 %
+%--------------------------%
+\begin{frame}[t]
+\frametitle{Housekeeping}
+\vspace{0.5cm}
+
+	\begin{center}
+		\textbf{Success is your responsibility!}
+	\end{center}	
+
+	\vspace{0.5cm}
+	
+	\begin{itemize}
+		\item Many resources available to help you
+		\bigskip
+		\item To do well, you must take the initiative to utilize them in a way that works best for you (\emph{more on this later})
+		\bigskip
+	\end{itemize}	
+\end{frame}
+
+
+%---------------------------%
+% Questions                 %
+%---------------------------%
+\begin{frame}
+	\begin{center}
+		\Huge{\textcolor{myblue}{Questions?}}
+	\end{center}	
+\end{frame}
+	
+\end{document}
