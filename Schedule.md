@@ -1,8 +1,8 @@
 # Schedule for Intro Preparation
 
 1. ~~May 27-31: Finish syllabus~~
-2. Jun. 3-7: Content for Day #1 (Sep. 5)
-3. Jun. 10-14: Content for Day #2 (Sep. 10)
+2. ~~Jun. 3-7: Content for Day #1 (Sep. 5)~~
+3. ~~Jun. 10-14: Content for Day #2 (Sep. 10)~~
 4. Jun. 17-21: Content for Day #3 (Sep. 12)
 5. Jun. 24-28: Content for Day #4 (Sep. 17)
 6. Jul. 1-5: Content for Day #5 (Sep. 19)
