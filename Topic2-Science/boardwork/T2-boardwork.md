@@ -1,5 +1,9 @@
 # Boardwork for Day #2 - Science and the Scientific Method
 
+## Learning Catalytics Test
+Start out the class with the first Learning Catalytics questionnaire
+
+## Case Studies
 >Draw scientific process on the board, and refer to that as we walk through these
 
 ## Case Study #1: Gastritis
@@ -48,7 +52,7 @@ Shortly after (1999) a group headed by Dr. Brent Taylor published a paper
 
 Became a "David & Goliath" battle of Wakefield and parents *vs* "big pharma"
 
-Independent researchers in the UK, Canada, and Finland did not detect any association with between the MMR vaccint and autism.
+Independent researchers in the UK, Canada, and Finland did not detect any association with between the MMR vaccine and autism.
 
 Danish study of **~440,000** children who had received the MMR vaccine and **97,000** who did not  
   - No difference in the risk of autism  
